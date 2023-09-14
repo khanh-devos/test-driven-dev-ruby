@@ -1,7 +1,7 @@
 require_relative 'solver' # This assumes your Solver class is in a file named solver.rb
 require 'rspec'
 
-describe "Solver" do
+describe 'Solver' do
   describe '#factorial : ' do
     it 'returns 1 for 0' do
       expect(Solver.factorial(0)).to eq(1)

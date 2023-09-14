@@ -1,22 +1,20 @@
-
 class Solver
-  def self.factorial(n)
-    raise ArgumentError, 'Negative integer not allowed' if n < 0
-    return 1 if n == 0
-  
-    (1..n).reduce(:*)
+  def self.factorial(num)
+    raise ArgumentError, 'Negative integer not allowed' if num.negative?
+    return 1 if num.zero?
+
+    (1..num).reduce(:*)
   end
-  
+
   def self.reverse(word)
     word.reverse
   end
-  
-  def self.fizzbuzz(n)
-    return 'fizzbuzz' if (n % 3).zero? && (n % 5).zero?
-    return 'fizz' if (n % 3).zero?
-    return 'buzz' if (n % 5).zero?
-  
-    n.to_s
+
+  def self.fizzbuzz(num)
+    return 'fizzbuzz' if (num % 3).zero? && (num % 5).zero?
+    return 'fizz' if (num % 3).zero?
+    return 'buzz' if (num % 5).zero?
+
+    num.to_s
   end
 end
-  
