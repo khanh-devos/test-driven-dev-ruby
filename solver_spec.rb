@@ -19,7 +19,7 @@ describe 'Solver' do
 
   describe '#reverse' do
     it 'reverses the string' do
-      expect(Solver.reverse('hello..')).to eq('olleh')
+      expect(Solver.reverse('hello..')).to eq('..olleh')
       expect(Solver.reverse('world')).to eq('dlrow')
     end
   end
