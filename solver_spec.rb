@@ -7,19 +7,19 @@ describe 'Solver' do
       expect(Solver.factorial(0)).to eq(1)
     end
 
-    it 'returns the factorial for positive integers' do
+    it 'returns the factorial for positive integers :' do
       expect(Solver.factorial(1)).to eq(1)
       expect(Solver.factorial(5)).to eq(120)
     end
 
-    it 'raises an exception for negative integers' do
+    it 'a negative integer triggers an exception' do
       expect { Solver.factorial(-1) }.to raise_error(ArgumentError)
     end
   end
 
   describe '#reverse' do
     it 'reverses the string' do
-      expect(Solver.reverse('hello')).to eq('olleh')
+      expect(Solver.reverse('hello..')).to eq('olleh')
       expect(Solver.reverse('world')).to eq('dlrow')
     end
   end
