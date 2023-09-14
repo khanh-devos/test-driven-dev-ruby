@@ -1,13 +1,9 @@
 class Solver
     def self.factorial(num)
-      raise ArgumentError, 'Negative integer not allowed' if num < 0
-      return 1 if num == 0
+      raise ArgumentError, 'Negative integer not allowed' if num.negative?
+      return 1 if num.zero?
   
-      result = 1
-      (1..num).each do |i|
-        result *= i
-      end
-      result
+      (1..num).reduce(:*)
     end
   
     def self.reverse(word)
@@ -15,12 +11,10 @@ class Solver
     end
   
     def self.fizzbuzz(num)
-      result = ''
+      return 'fizzbuzz' if (num % 3).zero? && (num % 5).zero?
+      return 'fizz' if (num % 3).zero?
+      return 'buzz' if (num % 5).zero?
   
-      result += 'fizz' if (num % 3).zero?
-      result += 'buzz' if (num % 5).zero?
-  
-      result.empty? ? num.to_s : result
+      num.to_s
     end
   end
-  
